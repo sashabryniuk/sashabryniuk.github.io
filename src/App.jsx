@@ -2,6 +2,9 @@ import { useRef, useEffect } from "react";
 import { drawCanvas } from "./utils/background";
 import Navbar from "./components/Navbar";
 import Promo from "./components/Promo";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Skills from "./components/Skills";
 
 const App = () => {
   const canvasRef = useRef(null);
@@ -14,7 +17,12 @@ const App = () => {
     <div className="bg-black bg-gradient">
       <canvas ref={canvasRef}></canvas>
       <Navbar />
-      <Promo />
+      <main>
+        <Promo />
+        <About />
+        <Skills />
+      </main>
+      <Footer />
     </div>
   );
 };

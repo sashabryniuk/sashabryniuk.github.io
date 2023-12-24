@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   font-family: "Montserrat", sans-serif;
@@ -10,8 +15,7 @@
   margin: 0;
 }
 .bg-gradient {
-  /* 
-  background-image: radial-gradient(
+  /* background-image: radial-gradient(
       circle at top right,
       rgba(121, 68, 154, 0.13),
       transparent

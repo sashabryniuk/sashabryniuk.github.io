@@ -47,7 +47,7 @@ const Promo = () => {
               duration: 0.5,
               delay: 0,
             }}
-            className="text-[100px] text-gradient font-extrabold leading-normal relative"
+            className="text-[100px] text-gradient font-normal leading-normal relative font-monoton"
           >
             SASHA BRYNIUK
           </motion.h1>
@@ -58,7 +58,7 @@ const Promo = () => {
               duration: 0.5,
               delay: 0,
             }}
-            className="text-[#FFB800] text-[100px] font-normal leading-0"
+            className="text-[#FFB800] text-[95px] font-normal leading-0 uppercase"
           >
             i’m graphic designer
           </motion.p>
