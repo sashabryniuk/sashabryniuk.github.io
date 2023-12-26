@@ -1,8 +1,9 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import styles from "../styles/style";
 
-const Promo = () => {
+const Hero = () => {
   const paragraphCtrl = useAnimation();
   const headingCtrl = useAnimation();
 
@@ -20,45 +21,49 @@ const Promo = () => {
     if (inView) {
       animationSequence();
     }
-    if (!inView) {
-      console.log("Promo not in view");
-    }
   }, [inView]);
 
   return (
     <>
-      <section ref={ref} className="flex justify-center">
+      <section ref={ref} className="flex justify-center relative">
         <div className="w-[1280px] h-screen p-8 flex flex-col justify-center">
+          <div className="absolute right-0 top-[15%] select-none">
+            <img
+              src="/images/Ellipse-1.png"
+              alt=""
+              className="w-[780px] h-[830px] object-cover"
+            />
+          </div>
           <motion.p
-            initial={{ y: -500, opacity: 0 }}
+            /* initial={{ y: -500, opacity: 0 }}
             animate={paragraphCtrl}
             transition={{
               duration: 0.5,
               delay: 0,
-            }}
-            className="text-[#FFB800] text-[100px] font-normal leading-0"
+            }} */
+            className={styles.paragraphHero}
           >
             HI, MY NAME IS
           </motion.p>
           <motion.h1
-            initial={{ x: -500, opacity: 0 }}
+            /* initial={{ x: -500, opacity: 0 }}
             animate={headingCtrl}
             transition={{
               duration: 0.5,
               delay: 0,
-            }}
-            className="text-[100px] text-gradient font-normal leading-normal relative font-monoton"
+            }} */
+            className={styles.headingHero}
           >
             SASHA BRYNIUK
           </motion.h1>
           <motion.p
-            initial={{ y: 500, opacity: 0 }}
+            /* initial={{ y: 500, opacity: 0 }}
             animate={paragraphCtrl}
             transition={{
               duration: 0.5,
               delay: 0,
-            }}
-            className="text-[#FFB800] text-[95px] font-normal leading-0 uppercase"
+            }} */
+            className={styles.paragraphHero}
           >
             i’m graphic designer
           </motion.p>
@@ -68,4 +73,4 @@ const Promo = () => {
   );
 };
 
-export default Promo;
+export default Hero;

@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { drawCanvas } from "./utils/background";
 import Navbar from "./components/Navbar";
-import Promo from "./components/Promo";
+import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -15,10 +15,10 @@ const App = () => {
   }, []);
   return (
     <div className="bg-black bg-gradient">
-      <canvas ref={canvasRef}></canvas>
+      <canvas ref={canvasRef} className="z-10"></canvas>
       <Navbar />
       <main>
-        <Promo />
+        <Hero />
         <About />
         <Skills />
       </main>

@@ -2,7 +2,7 @@ const STAR_COLOR = "#fff";
 const STAR_SIZE = 3;
 const STAR_MIN_SCALE = 0.2;
 const OVERFLOW_THRESHOLD = 50;
-const STAR_COUNT = (window.innerWidth + window.innerHeight) / 4;
+const STAR_COUNT = (window.innerWidth + window.innerHeight) / 8;
 
 export const drawCanvas = ({ canvas, context }) => {
   let scale = 1, // device pixel ratio
@@ -23,8 +23,8 @@ export const drawCanvas = ({ canvas, context }) => {
 
   window.onresize = resize;
   canvas.onmousemove = onMouseMove;
-  canvas.ontouchmove = onTouchMove;
-  canvas.ontouchend = onMouseLeave;
+  /* canvas.ontouchmove = onTouchMove;
+  canvas.ontouchend = onMouseLeave; */
   canvas.onmouseleave = onMouseLeave;
   document.onmouseleave = onMouseLeave;
 

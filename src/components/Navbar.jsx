@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className="fixed h-[90px] bg-black/30 z-50 top-0 left-0 w-full">
+    <nav className="fixed h-[90px] bg-black/30 z-50 top-0 left-0 w-full backdrop-blur-sm">
       <div className="flex flex-row justify-between text-[24px] font-bold p-7 uppercase">
         <ul className="flex flex-row justify-between gap-[34px] ">
           <li>

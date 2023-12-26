@@ -4,6 +4,7 @@ import {
   SiAdobephotoshop,
   SiAdobeindesign,
 } from "react-icons/si";
+import Corel from "../icons/coreldraw-icon.svg?react";
 
 export const SKILLS = [
   {
@@ -21,5 +22,9 @@ export const SKILLS = [
   {
     icon: <SiAdobeindesign className="w-[90px] h-[90px]" />,
     title: "ID",
+  },
+  {
+    icon: <Corel className="w-[90px] h-[90px]" />,
+    title: "Corel",
   },
 ];
