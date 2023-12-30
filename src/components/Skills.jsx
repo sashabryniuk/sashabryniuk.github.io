@@ -26,9 +26,9 @@ const Skills = () => {
 
   return (
     <section className="flex justify-center pt-12" id="skills">
-      <div className="w-[1280px] h-screen p-8 flex flex-col text-center">
+      <div className="w-[1280px] p-8 flex flex-col text-center">
         <h2 className={styles.heading2}>WHAT SKILLS DO I HAVE?</h2>
-        <div className="pt-10 flex flex-row gap-[35px] justify-center">
+        <div className="pt-10 flex flex-row gap-[35px] justify-center flex-wrap">
           {SKILLS.map((skill, index) => {
             return skillsItem(skill, index);
           })}

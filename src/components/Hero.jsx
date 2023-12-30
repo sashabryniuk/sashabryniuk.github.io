@@ -27,11 +27,11 @@ const Hero = () => {
     <>
       <section ref={ref} className="flex justify-center relative">
         <div className="w-[1280px] h-screen p-8 flex flex-col justify-center">
-          <div className="absolute right-0 top-[15%] select-none">
+          <div className="absolute right-0 top-[15%] select-none max-w-[780px] max-h-[830px]">
             <img
               src="/images/Ellipse-1.png"
               alt=""
-              className="w-[780px] h-[830px] object-cover"
+              className="w-[100%] h-[100%] object-cover"
             />
           </div>
           <motion.p

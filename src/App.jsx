@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Portfolio from "./components/Portfolio";
 
 const App = () => {
   const canvasRef = useRef(null);
@@ -21,6 +22,7 @@ const App = () => {
         <Hero />
         <About />
         <Skills />
+        <Portfolio />
       </main>
       <Footer />
     </div>

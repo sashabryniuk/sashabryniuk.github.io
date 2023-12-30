@@ -21,7 +21,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href=""
+              href="#portfolio"
               className="text-main-yellow hover:text-main-red duration-300"
             >
               Portfolio
