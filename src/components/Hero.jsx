@@ -24,52 +24,50 @@ const Hero = () => {
   }, [inView]);
 
   return (
-    <>
-      <section ref={ref} className="flex justify-center relative">
-        <div className="w-[1280px] h-screen p-8 flex flex-col justify-center">
-          <div className="absolute right-0 top-[15%] select-none max-w-[780px] max-h-[830px]">
-            <img
-              src="/images/Ellipse-1.png"
-              alt=""
-              className="w-[100%] h-[100%] object-cover"
-            />
-          </div>
-          <motion.p
-            /* initial={{ y: -500, opacity: 0 }}
+    <section ref={ref} className="flex justify-center relative">
+      <div className="w-[1280px] h-screen p-8 flex flex-col justify-center">
+        <div className="absolute right-0 xl:top-[25%] md:top-[20%] top-[40%] select-none xl:max-w-[820px] md:max-w-[520px] max-w-[320px]">
+          <img
+            src="/images/Ellipse-1.png"
+            alt=""
+            className="w-[100%] h-[100%] object-contain"
+          />
+        </div>
+        <motion.p
+          /* initial={{ y: -500, opacity: 0 }}
             animate={paragraphCtrl}
             transition={{
               duration: 0.5,
               delay: 0,
             }} */
-            className={styles.paragraphHero}
-          >
-            HI, MY NAME IS
-          </motion.p>
-          <motion.h1
-            /* initial={{ x: -500, opacity: 0 }}
+          className={`${styles.paragraphHero} md:block hidden`}
+        >
+          HI, MY NAME IS
+        </motion.p>
+        <motion.h1
+          /* initial={{ x: -500, opacity: 0 }}
             animate={headingCtrl}
             transition={{
               duration: 0.5,
               delay: 0,
             }} */
-            className={styles.headingHero}
-          >
-            SASHA BRYNIUK
-          </motion.h1>
-          <motion.p
-            /* initial={{ y: 500, opacity: 0 }}
+          className={styles.headingHero}
+        >
+          SASHA BRYNIUK
+        </motion.h1>
+        <motion.p
+          /* initial={{ y: 500, opacity: 0 }}
             animate={paragraphCtrl}
             transition={{
               duration: 0.5,
               delay: 0,
             }} */
-            className={styles.paragraphHero}
-          >
-            i’m graphic designer
-          </motion.p>
-        </div>
-      </section>
-    </>
+          className={styles.paragraphHero}
+        >
+          <span className="md:inline-block hidden">i’m</span> graphic designer
+        </motion.p>
+      </div>
+    </section>
   );
 };
 

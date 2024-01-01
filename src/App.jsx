@@ -15,7 +15,7 @@ const App = () => {
     drawCanvas({ canvas, context });
   }, []);
   return (
-    <div className="bg-black bg-gradient">
+    <div className="bg-black overflow-hidden">
       <canvas ref={canvasRef} className="z-10"></canvas>
       <Navbar />
       <main>

@@ -14,35 +14,59 @@ html {
   padding: 0;
   margin: 0;
 }
-.bg-gradient {
-  /* background-image: radial-gradient(
-      circle at top right,
-      rgba(121, 68, 154, 0.13),
-      transparent
-    ),
-    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent); */
-}
+
 canvas {
   position: fixed;
   width: 100%;
   height: 100%;
 }
+
 .text-gradient {
   background: linear-gradient(270deg, #ffb800 -13.19%, #ee1d00 123.08%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.blur-class:hover .outline-blur {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: calc(100% + 5px);
-  height: calc(100% + 5px);
-  background-color: transparent;
-  border: 5px solid rgba(255, 255, 255, 0.5);
-  border-radius: 58px;
-  filter: blur(2px);
-  z-index: -1;
-  transition: border 0.3s;
+.dot-typing {
+  position: relative;
+  top: 25px;
+  left: -9980px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffb800;
+  color: #ffb800;
+  box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800, 10014px 0 0 0 #ffb800;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+  0% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px -10px 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px -10px 0 0 #ffb800;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
 }

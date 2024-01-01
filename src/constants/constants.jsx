@@ -8,23 +8,23 @@ import Corel from "../icons/coreldraw-icon.svg?react";
 
 export const SKILLS = [
   {
-    icon: <FaFigma className="w-[90px] h-[90px] " />,
+    icon: <FaFigma className="w-[100%] h-[100%]" />,
     title: "FIGMA",
   },
   {
-    icon: <SiAdobeillustrator className="w-[90px] h-[90px] " />,
+    icon: <SiAdobeillustrator className="w-[100%] h-[100%]" />,
     title: "AI",
   },
   {
-    icon: <SiAdobephotoshop className="w-[90px] h-[90px]" />,
+    icon: <SiAdobephotoshop className="w-[100%] h-[100%]" />,
     title: "PS",
   },
   {
-    icon: <SiAdobeindesign className="w-[90px] h-[90px]" />,
+    icon: <SiAdobeindesign className="w-[100%] h-[100%]" />,
     title: "ID",
   },
   {
-    icon: <Corel className="w-[90px] h-[90px]" />,
+    icon: <Corel className="w-[100%] h-[100%]" />,
     title: "Corel",
   },
 ];

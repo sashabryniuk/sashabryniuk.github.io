@@ -2,7 +2,12 @@ const STAR_COLOR = "#fff";
 const STAR_SIZE = 3;
 const STAR_MIN_SCALE = 0.2;
 const OVERFLOW_THRESHOLD = 50;
-const STAR_COUNT = (window.innerWidth + window.innerHeight) / 8;
+let STAR_COUNT = 0;
+if (window.innerWidth <= 768) {
+  STAR_COUNT = (window.innerWidth + window.innerHeight) / 30;
+} else {
+  STAR_COUNT = (window.innerWidth + window.innerHeight) / 8;
+}
 
 export const drawCanvas = ({ canvas, context }) => {
   let scale = 1, // device pixel ratio
@@ -13,18 +18,25 @@ export const drawCanvas = ({ canvas, context }) => {
 
   let pointerX, pointerY;
 
-  let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
+  let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0 };
+
+  if (window.innerWidth <= 768) {
+    velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
+  } else {
+    velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
+  }
 
   let touchInput = false;
 
   generate();
+
   resize();
   step();
 
   window.onresize = resize;
   canvas.onmousemove = onMouseMove;
-  /* canvas.ontouchmove = onTouchMove;
-  canvas.ontouchend = onMouseLeave; */
+  /* canvas.ontouchmove = onTouchMove; */
+  canvas.ontouchend = onMouseLeave;
   canvas.onmouseleave = onMouseLeave;
   document.onmouseleave = onMouseLeave;
 
@@ -99,10 +111,12 @@ export const drawCanvas = ({ canvas, context }) => {
   }
 
   function step() {
-    context.clearRect(0, 0, width, height);
+    if (!document.hidden) {
+      context.clearRect(0, 0, width, height);
 
-    update();
-    render();
+      update();
+      render();
+    }
 
     requestAnimationFrame(step);
   }
