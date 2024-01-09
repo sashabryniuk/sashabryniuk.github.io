@@ -46,7 +46,7 @@ const Portfolio = () => {
             className="w-[100%] h-[100%] object-cover"
           />
         </div>
-        <div className="flex flex-col gap-20 mt-12">
+        <div className="flex flex-col xl:gap-20 gap-[35px] mt-12">
           {PROJECTS.map((project, index) => {
             return (
               <motion.div

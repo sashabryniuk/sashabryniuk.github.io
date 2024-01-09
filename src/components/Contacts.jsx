@@ -12,10 +12,12 @@ const ContactsItem = ({ icon, text, link }) => {
           target="_blank"
           className="flex flex-row md:gap-[15px] gap-[5px] justify-center items-center"
         >
-          <div className="xl:w-[96px] xl:h-[96px] md:w-[74px] md:h-[74px] w-[52px] h-[52px] text-main-white">
-            {icon}
-          </div>
-          <p className="text-main-white xl:text-[64px] md:text-[42px] text-2xl font-bold">
+          {icon !== undefined ? (
+            <div className="xl:w-[96px] xl:h-[96px] md:w-[74px] md:h-[74px] w-[52px] h-[52px] text-main-white">
+              {icon}
+            </div>
+          ) : null}
+          <p className="flex text-main-white xl:text-[64px] md:text-[42px] text-2xl font-bold xl:h-[96px] md:h-[74px] h-[52px] items-center">
             {text}
           </p>
         </a>

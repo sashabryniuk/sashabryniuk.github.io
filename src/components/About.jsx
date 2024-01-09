@@ -3,7 +3,7 @@ import styles from "../styles/style";
 const About = () => {
   return (
     <section className="flex justify-center pt-12 relative" id="about">
-      <div className="w-[1280px] h-screen p-8 flex flex-col">
+      <div className="w-[1280px] p-8 flex flex-col">
         <div className="absolute left-0 select-none top-[20%] xl:max-w-[620px] md:max-w-[420px] max-w-[320px]">
           <img
             src="/images/Ellipse-2.png"

@@ -87,7 +87,6 @@ export const CONTACTS = [
     link: "mailto:sashabrinyk@gmail.com",
   },
   {
-    icon: "",
     text: "Freelancehunt",
     link: "https://freelancehunt.com/freelancer/sashabrynyuk.html",
   },
