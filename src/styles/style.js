@@ -3,6 +3,7 @@ const styles = {
     "xl:text-[95px] md:text-[50px] text-[42px] text-gradient relative font-monoton z-20",
   paragraphHero:
     "text-[#FFB800] xl:text-[95px] md:text-[50px] text-[36px] uppercase select-none font-bold",
+  text: "text-[#F5F5F5] xl:text-3xl md:text-2xl text-xl font-bold",
   skillsItem:
     "max-w-[200px] rounded-[58px] cursor-grab text-[#F5F5F5] hover:text-[#ffb800] hover:fill-[#ffb800] fill-[#f5f5f5] bg-gray-950 z-20 bg-opacity-85",
   heading2:

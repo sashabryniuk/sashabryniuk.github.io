@@ -16,11 +16,25 @@ const About = () => {
           className={`rounded-[58px] bg-gray-950 bg-opacity-85 z-20 ${styles.outline} md:mt-12 mt-2`}
         >
           <div className="backdrop-blur-sm rounded-[58px] m-6 ">
-            <p className="text-[#F5F5F5] xl:text-4xl md:text-2xl text-xl font-bold ">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur odit totam quo temporibus voluptatem illo quisquam
-              voluptatibus magnam iusto eligendi? Asperiores delectus corrupti
-              id doloremque ipsa fugit, fugiat officiis sint?
+            <p className={`${styles.text} text-main-yellow`}>
+              Hello, my name is Sasha!
+            </p>
+            <p className={`${styles.text} mt-8`}>
+              I am a fourth-year student at the Ukrainian Academy of Printing,
+              majoring in graphic design.
+            </p>
+            <p className={`${styles.text} mt-8`}>
+              Prior to this, I studied art for 6 years at an art school, which I
+              successfully completed. And even took part in the All-Ukrainian
+              competition "Flavorful Etude," where I secured the 2nd place.
+            </p>
+            <p className={`${styles.text} mt-8`}>
+              Currently, I am eager to immerse myself in my field, staying
+              updated on various design trends and constantly refining my skills
+              to bring your desires to life. I specialize in logo design, web
+              design, branding, social media visuals, and the preparation and
+              development of printed materials. Additionally, I am passionate
+              about sports and love the mountains.
             </p>
           </div>
         </div>

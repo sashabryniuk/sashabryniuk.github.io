@@ -64,7 +64,7 @@ const Portfolio = () => {
           })}
         </div>
         <div className="flex flex-row justify-center mt-14">
-          <p className="text-[32px] font-bold text-[#FFB800] ">
+          <p className="text-[32px] font-bold text-main-yellow ">
             to be continued
           </p>
           <div className="dot-typing"></div>

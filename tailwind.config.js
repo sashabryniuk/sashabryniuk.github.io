@@ -6,6 +6,7 @@ export default {
       colors: {
         "main-yellow": "#ffb800",
         "main-red": "#ee1d00",
+        "main-white": "#f5f5f5",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],

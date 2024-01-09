@@ -22,7 +22,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div>
-          <a href="" className={styles.link}>
+          <a href="#contacts" className={styles.link}>
             Contacts
           </a>
         </div>

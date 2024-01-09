@@ -1,30 +1,8 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import styles from "../styles/style";
 
 const Hero = () => {
-  const paragraphCtrl = useAnimation();
-  const headingCtrl = useAnimation();
-
-  const animationSequence = async () => {
-    await headingCtrl.start({ x: 0, opacity: 1 });
-    await paragraphCtrl.start({ y: 0, opacity: 1 });
-  };
-
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      animationSequence();
-    }
-  }, [inView]);
-
   return (
-    <section ref={ref} className="flex justify-center relative">
+    <section className="flex justify-center relative">
       <div className="w-[1280px] h-screen p-8 flex flex-col justify-center">
         <div className="absolute right-0 xl:top-[25%] md:top-[20%] top-[40%] select-none xl:max-w-[820px] md:max-w-[520px] max-w-[320px]">
           <img
@@ -33,39 +11,13 @@ const Hero = () => {
             className="w-[100%] h-[100%] object-contain"
           />
         </div>
-        <motion.p
-          /* initial={{ y: -500, opacity: 0 }}
-            animate={paragraphCtrl}
-            transition={{
-              duration: 0.5,
-              delay: 0,
-            }} */
-          className={`${styles.paragraphHero} md:block hidden`}
-        >
+        <p className={`${styles.paragraphHero} md:block hidden`}>
           HI, MY NAME IS
-        </motion.p>
-        <motion.h1
-          /* initial={{ x: -500, opacity: 0 }}
-            animate={headingCtrl}
-            transition={{
-              duration: 0.5,
-              delay: 0,
-            }} */
-          className={styles.headingHero}
-        >
-          SASHA BRYNIUK
-        </motion.h1>
-        <motion.p
-          /* initial={{ y: 500, opacity: 0 }}
-            animate={paragraphCtrl}
-            transition={{
-              duration: 0.5,
-              delay: 0,
-            }} */
-          className={styles.paragraphHero}
-        >
+        </p>
+        <h1 className={styles.headingHero}>SASHA BRYNIUK</h1>
+        <p className={styles.paragraphHero}>
           <span className="md:inline-block hidden">i’m</span> graphic designer
-        </motion.p>
+        </p>
       </div>
     </section>
   );
