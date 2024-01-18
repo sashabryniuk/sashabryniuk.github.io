@@ -2,23 +2,33 @@ import styles from "../styles/style";
 
 const Hero = () => {
   return (
-    <section className="flex justify-center relative">
-      <div className="w-[1280px] h-screen p-8 flex flex-col justify-center">
-        <div className="absolute right-0 xl:top-[25%] md:top-[20%] top-[40%] select-none xl:max-w-[820px] md:max-w-[520px] max-w-[320px]">
-          <img
-            src="/images/Ellipse-1.png"
-            alt=""
-            className="w-[100%] h-[100%] object-contain"
-          />
+    <section className="relative md:pt-[130px] pt-[60px]">
+      <div className="max-w-[1280px] md:min-h-[862px] min-h-[400px] mx-auto p-8">
+        <p className={`${styles.subheader}`}>HI, MY NAME IS</p>
+        <div className="relative md:mt-6 mt-3">
+          <p
+            className={`${styles.header} ${styles.headerBack} md:top-[-32px] top-[-8px] md:ml-8 ml-2`}
+          >
+            SASHA BRYNIUK
+          </p>
+          <h1 className={`${styles.header} relative z-20 md:ml-3 ml-[3px]`}>
+            SASHA BRYNIUK
+          </h1>
+          <p
+            className={`${styles.header} ${styles.headerBack} md:top-[32px] top-[8px]`}
+          >
+            SASHA BRYNIUK
+          </p>
         </div>
-        <p className={`${styles.paragraphHero} md:block hidden`}>
-          HI, MY NAME IS
-        </p>
-        <h1 className={styles.headingHero}>SASHA BRYNIUK</h1>
-        <p className={styles.paragraphHero}>
-          <span className="md:inline-block hidden">i’m</span> graphic designer
+        <p className={`${styles.subheader} md:mt-6 mt-3`}>
+          i’m graphic <br className="md:hidden" /> designer
         </p>
       </div>
+      <p className={`${styles.backgroundText} bottom-0 right-0`}>
+        DES
+        <br />
+        IGN<span className="font-grotesk">*</span>
+      </p>
     </section>
   );
 };

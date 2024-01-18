@@ -1,16 +1,23 @@
 const styles = {
-  headingHero:
-    "xl:text-[95px] md:text-[50px] text-[42px] text-gradient relative font-monoton z-20",
-  paragraphHero:
-    "text-[#FFB800] xl:text-[95px] md:text-[50px] text-[36px] uppercase select-none font-bold",
-  text: "text-[#F5F5F5] xl:text-3xl md:text-2xl text-xl font-bold",
-  skillsItem:
-    "max-w-[200px] rounded-[58px] cursor-grab text-[#F5F5F5] hover:text-[#ffb800] hover:fill-[#ffb800] fill-[#f5f5f5] bg-gray-950 z-20 bg-opacity-85",
-  heading2:
-    "xl:text-[64px] md:text-[42px] text-[32px] font-bold text-[#FFB800] uppercase select-none",
+  header:
+    "md:text-[72px] text-[32px] md:leading-[72px] leading-[32px] font-main font-bold text-main-blue ",
+  headerBack: "text-transparent transparent-text absolute",
+  subheader:
+    "text-white md:text-[64px] text-[32px] uppercase font-main font-bold",
+  backgroundText:
+    "absolute md:text-[300px] text-[100px] md:leading-[250px] leading-[80px] text-main-background-text font-main font-bold inline-block",
+  backgroundCardText:
+    "absolute md:text-[220px] text-[175px] md:leading-[110px] leading-[100px] text-main-card-background-light font-main font-bold inline-block",
+  backgroundCardPortfolioText:
+    "font-main font-bold md:text-[500px] text-[100px] md:leading-[235px] leading-[50px] text-main-card-background-light absolute",
+  text: "md:text-xl text-[16px]",
+  animatedHeader: "font-main font-bold md:text-4xl text-xl",
+  heading2: "font-main md:text-3xl text-2xl font-bold text-main-blue",
+  heading3: "font-main md:text-2xl text-xl font-bold text-main-blue",
+  contactsText: "md:text-3xl text-xl",
   outline:
-    "hover:outline outline-[#F5F5F5] outline-offset-[0px] hover:outline-offset-[10px] hover:shadow-outline duration-100",
-  link: "text-main-yellow hover:text-main-red duration-300",
+    "hover:outline outline-[#F5F5F5] outline-offset-[0px] hover:outline-offset-[5px]",
+  link: "font-main text-main-white hover:text-main-blue md:text-[16px] text-[12px] font-bold duration-300",
 };
 
 export default styles;

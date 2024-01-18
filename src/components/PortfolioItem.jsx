@@ -3,48 +3,57 @@ import styles from "../styles/style";
 const PortfolioItem = ({ image, text, techStack, index, link }) => {
   return (
     <div
-      className={`rounded-[58px] bg-gray-950 bg-opacity-85 z-20 relative blur-class ${styles.outline} cursor-pointer p-8`}
+      className={`overflow-hidden relative rounded-[10px] md:p-8 p-4 flex flex-col justify-start items-center xl:gap-[57px] gap-8 cursor-pointer bg-main-card-background ${
+        styles.outline
+      } ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
     >
+      <div className="md:max-w-[50%] max-w-[90%] relative z-20">
+        <a href={link} target="_blank">
+          <img
+            src={image}
+            alt="logo"
+            className={`w-full h-auto object-contain duration-300 ${
+              index % 2 === 0 ? "animated-left" : "animated-right"
+            }`}
+          />
+        </a>
+      </div>
       <div
-        className={`backdrop-blur-sm rounded-[58px] m-6 flex justify-between items-center xl:gap-[75px] gap-8 flex-col ${
-          index % 2 === 0 ? "xl:flex-row" : "xl:flex-row-reverse"
+        className={`${
+          styles.text
+        } relative z-20 md:max-w-[40%] flex flex-col text-main-white ${
+          index % 2 === 0
+            ? "md:text-left text-right"
+            : "md:text-right text-left"
         }`}
       >
-        <div className="max-w-[490px] max-h-[360px]">
-          <a href={link} target="_blank">
-            <img
-              src={image}
-              alt="logo"
-              className="w-[100%] h-[100%] object-contain hover:scale-110 duration-300"
-            />
-          </a>
-        </div>
-        <div
-          className={`${
-            styles.text
-          } xl:max-w-[50%] flex flex-col justify-center ${
-            index % 2 === 0
-              ? "xl:text-left text-right"
-              : "xl:text-right text-left"
-          }`}
-        >
-          <p>{text}</p>
-          <p className="mt-6">
-            The process involved:
-            <br />
-            {techStack.length >= 1
-              ? techStack.map((tech, index) => (
-                  <span key={index} className="text-main-yellow">
-                    {tech}
-                    {index !== techStack.length - 1 && (
-                      <span className="separator text-[#F5F5F5]"> and </span>
-                    )}
-                  </span>
-                ))
-              : techStack}
-          </p>
-        </div>
+        <p>{text}</p>
+        <p className="mt-6">
+          The process involved:
+          <br />
+          {techStack.length >= 1
+            ? techStack.map((tech, index) => (
+                <span key={index} className="text-main-blue">
+                  {tech}
+                  {index !== techStack.length - 1 && (
+                    <span className="text-main-white"> and </span>
+                  )}
+                </span>
+              ))
+            : techStack}
+        </p>
       </div>
+      <p
+        className={`${
+          styles.backgroundCardPortfolioText
+        } md:top-[125px] bottom-0 ${
+          index % 2 === 0
+            ? "md:right-[-10px] md:left-auto left-[-5px]"
+            : "md:left-[-10px] right-[-5px]"
+        }`}
+      >
+        {index + 1}
+      </p>
     </div>
   );
 };

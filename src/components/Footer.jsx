@@ -1,21 +1,23 @@
+import styles from "../styles/style";
+
 const Footer = () => {
   return (
-    <footer className="h-[90px] w-full">
+    <footer className="w-full mt-8">
       <div className="flex flex-col text-center">
         <h3 className="z-50 text-[24px]">
-          <span className="text-gradient">Designed by </span>
+          <span className={`${styles.text} text-main-blue`}>Designed by </span>
           <a
             href="https://sashabryniuk.github.io/"
-            className="text-main-yellow hover:text-main-red duration-300"
+            className="text-main-blue hover:text-white duration-300"
           >
             Sasha
           </a>
         </h3>
         <h3 className="z-50 text-[24px]">
-          <span className="text-gradient">Developed by </span>
+          <span className={`${styles.text} text-main-blue`}>Developed by </span>
           <a
             href="https://hashtab.github.io/"
-            className="text-main-yellow hover:text-main-red duration-300"
+            className="text-main-blue hover:text-white duration-300"
           >
             HashTab
           </a>

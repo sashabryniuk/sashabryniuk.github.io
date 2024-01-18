@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.text-gradient {
+  background: linear-gradient(270deg, #ffb800 -13.19%, #ee1d00 123.08%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dot-typing {
+  position: relative;
+  top: 25px;
+  left: -9980px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffb800;
+  color: #ffb800;
+  box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800, 10014px 0 0 0 #ffb800;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+  0% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px -10px 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px -10px 0 0 #ffb800;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #ffb800, 9999px 0 0 0 #ffb800,
+      10014px 0 0 0 #ffb800;
+  }
+}

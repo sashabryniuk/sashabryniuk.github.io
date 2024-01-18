@@ -5,29 +5,45 @@ import {
   SiAdobephotoshop,
   SiAdobeindesign,
 } from "react-icons/si";
-import Corel from "../icons/coreldraw-icon.svg?react";
 import { FaInstagram } from "react-icons/fa6";
 
 export const SKILLS = [
   {
     icon: <FaFigma className="w-[100%] h-[100%]" />,
     title: "FIGMA",
+    percent: 90,
   },
   {
     icon: <SiAdobeillustrator className="w-[100%] h-[100%]" />,
     title: "AI",
+    percent: 85,
   },
   {
     icon: <SiAdobephotoshop className="w-[100%] h-[100%]" />,
     title: "PS",
+    percent: 85,
   },
   {
     icon: <SiAdobeindesign className="w-[100%] h-[100%]" />,
     title: "ID",
+    percent: 70,
+  },
+];
+
+export const ABOUT = [
+  {
+    title: "2013-2019",
+    description:
+      "Studied art for 6 years at an Polonne art school, which I successfully completed",
+    number: "01",
+    style: "light",
   },
   {
-    icon: <Corel className="w-[100%] h-[100%]" />,
-    title: "Corel",
+    title: "2020-2024",
+    description:
+      "I have been studying at the Ukrainian Academy of Printing for four years, and this year I will complete my bachelor's degree",
+    number: "02",
+    style: "dark",
   },
 ];
 
@@ -57,7 +73,7 @@ export const PROJECTS = [
     link: "https://www.figma.com/file/XgXlfeSRM4vPw9KuLqwjE7/certificate?type=design&node-id=0%3A1&mode=design&t=8YXfTAtflsvXWHOV-1",
   },
   {
-    image: "/images/logoUkraine.png",
+    image: "/images/logoLanding.png",
     text: "Creative design and development of a landing page for the client.",
     techStack: ["Adobe Illustrator", "Photoshop"],
     link: "https://www.figma.com/file/aUkeBcmVRielGlD2kEY8W0/Landing-Page?type=design&node-id=0%3A1&mode=design&t=zAb5BEC5k4uSv6N1-1",
@@ -72,22 +88,22 @@ export const PROJECTS = [
 
 export const CONTACTS = [
   {
-    icon: <FaInstagram className="w-[100%] h-[100%]" />,
-    text: "Instagram",
-    link: "https://www.instagram.com/sashabrinyk?igsh=am9qN2E3eXZibDh6",
-  },
-  {
     icon: <FaTelegram className="w-[100%] h-[100%]" />,
-    text: "Telegram",
+    text: "telegram",
     link: "https://t.me/sashabryniuk",
   },
   {
+    icon: <FaInstagram className="w-[100%] h-[100%]" />,
+    text: "instagram",
+    link: "https://www.instagram.com/sashabrinyk?igsh=am9qN2E3eXZibDh6",
+  },
+  {
     icon: <SiGmail className="w-[100%] h-[100%]" />,
-    text: "Gmail",
+    text: "gmail",
     link: "mailto:sashabrinyk@gmail.com",
   },
   {
-    text: "Freelancehunt",
+    text: "freelancehunt",
     link: "https://freelancehunt.com/freelancer/sashabrynyuk.html",
   },
 ];

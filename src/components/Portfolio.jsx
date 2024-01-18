@@ -1,5 +1,6 @@
 import { PROJECTS } from "../constants/constants";
 import styles from "../styles/style";
+import AnimatedHeader from "./AnimatedHeader";
 import PortfolioItem from "./PortfolioItem";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
@@ -27,26 +28,11 @@ const Portfolio = () => {
   }, [inView]);
 
   return (
-    <section className="flex justify-center py-12 relative" id="portfolio">
-      <div className="w-[1280px] p-8 flex flex-col text-center">
-        <h2 ref={ref} className={`${styles.heading2} z-10`}>
-          Portfolio
-        </h2>
-        <div className="absolute right-0 top-[10%] select-none max-w-[1020px]">
-          <img
-            src="/images/Ellipse-3.png"
-            alt=""
-            className="w-[100%] h-[100%] object-cover"
-          />
-        </div>
-        <div className="absolute left-0 top-[60%] select-none max-w-[1020px]">
-          <img
-            src="/images/Ellipse-4.png"
-            alt=""
-            className="w-[100%] h-[100%] object-cover"
-          />
-        </div>
-        <div className="flex flex-col xl:gap-20 gap-[35px] mt-12">
+    <section id="portfolio" className="relative">
+      <AnimatedHeader text={"portfolio"} />
+      <div className="max-w-[1000px] flex flex-col justify-start mx-auto">
+        <h2 ref={ref}></h2>
+        <div className="flex flex-col md:gap-20 gap-[35px] md:px-0 px-8 ">
           {PROJECTS.map((project, index) => {
             return (
               <motion.div
@@ -63,13 +49,16 @@ const Portfolio = () => {
             );
           })}
         </div>
-        <div className="flex flex-row justify-center mt-14">
-          <p className="text-[32px] font-bold text-main-yellow ">
-            to be continued
-          </p>
+        <div className="flex flex-row justify-center md:mt-14 mt-6">
+          <p className={"text-[32px] text-main-blue"}>to be continued</p>
           <div className="dot-typing"></div>
         </div>
       </div>
+      <p
+        className={`${styles.backgroundText} vertical-text top-[100px] left-0`}
+      >
+        PORTFOLIO<span className="font-grotesk">*</span>
+      </p>
     </section>
   );
 };

@@ -1,32 +1,40 @@
 import { useRef, useEffect } from "react";
-import { drawCanvas } from "./utils/background";
+import { background } from "./utils/gradient";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
-import Contacts from "./components/Contacts";
 
 const App = () => {
-  const canvasRef = useRef(null);
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const context = canvas.getContext("2d");
-    drawCanvas({ canvas, context });
+    const handleResize = () => {
+      if (window.innerWidth > 1024) {
+        background();
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
   return (
-    <div className="bg-black overflow-hidden">
-      <canvas ref={canvasRef} className="z-10"></canvas>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Portfolio />
-        <Contacts />
-      </main>
-      <Footer />
+    <div className="overflow-hidden h-full">
+      <div className="w-full h-full" id="gradient">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Portfolio />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
