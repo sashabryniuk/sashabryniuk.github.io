@@ -7,7 +7,7 @@ const Hero = () => {
         <p className={`${styles.subheader}`}>HI, MY NAME IS</p>
         <div className="relative md:mt-6 mt-3">
           <p
-            className={`${styles.header} ${styles.headerBack} md:top-[-32px] top-[-8px] md:ml-8 ml-2`}
+            className={`${styles.header} ${styles.headerBack} md:top-[-32px] md:ml-8 ml-2 lg:block hidden`}
           >
             SASHA BRYNIUK
           </p>

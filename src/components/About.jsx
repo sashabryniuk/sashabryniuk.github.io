@@ -35,7 +35,7 @@ const About = () => {
       <AnimatedHeader text={"about"} />
       <div className="md:max-w-[1000px] md:p-16 p-6 flex flex-col mx-auto rounded-[10px] bg-main-card-background overflow-hidden relative z-20">
         <div className="flex flex-row justify-between gap-[24px]">
-          <div className="relative flex flex-col justify-between">
+          <div className="relative flex flex-col gap-[24px] justify-between">
             <h1 className={`${styles.header} relative z-20 md:ml-5`}>
               SASHA
               <br />
