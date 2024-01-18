@@ -5,10 +5,7 @@ const Navbar = () => {
     <nav className="flex flex-row justify-end md:p-7 p-3 uppercase fixed max-h-[70px] z-50 top-0 left-0 w-full bg-main-card-background backdrop-blur-md">
       <ul className="flex flex-row justify-between md:gap-[34px] gap-[20px]">
         <li>
-          <a
-            href="https://github.com/sashabryniuk/sashabryniuk.github.io/tree/master/docs/v1"
-            className={styles.link}
-          >
+          <a href="https://sashabryniuk.github.io/v1" className={styles.link}>
             v1
           </a>
         </li>
