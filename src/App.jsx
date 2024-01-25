@@ -33,7 +33,7 @@ const App = () => {
           <Skills />
           <Portfolio />
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

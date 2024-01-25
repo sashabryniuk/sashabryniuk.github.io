@@ -32,7 +32,7 @@ const Portfolio = () => {
       <AnimatedHeader text={"portfolio"} />
       <div className="max-w-[1000px] flex flex-col justify-start mx-auto">
         <h2 ref={ref}></h2>
-        <div className="flex flex-col md:gap-20 gap-[35px] md:px-0 px-8 ">
+        <div className="flex flex-col md:gap-20 gap-[35px] md:px-0 px-8">
           {PROJECTS.map((project, index) => {
             return (
               <motion.div

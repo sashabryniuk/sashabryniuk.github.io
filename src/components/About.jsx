@@ -33,7 +33,7 @@ const About = () => {
   return (
     <section id="about" className="relative">
       <AnimatedHeader text={"about"} />
-      <div className="md:max-w-[1000px] md:p-16 p-6 flex flex-col mx-auto rounded-[10px] bg-main-card-background overflow-hidden relative z-20">
+      <div className="md:max-w-[1000px] md:min-h-[1200px] min-h-[1000px] md:p-16 p-6 flex flex-col mx-auto rounded-[10px] bg-main-card-background overflow-hidden relative z-20">
         <div className="flex flex-row justify-between gap-[24px]">
           <div className="relative flex flex-col gap-[24px] justify-between">
             <h1 className={`${styles.header} relative z-20 md:ml-5`}>
@@ -82,10 +82,10 @@ const About = () => {
           and the preparation and development of printed materials.
           Additionally, I am passionate about sports and love the mountains.
         </p>
-        <h2 className={`mt-10 ${styles.heading2}`}>
+        {/* <h2 className={`mt-10 ${styles.heading2}`}>
           <span className="font-grotesk">*</span>contacts
-        </h2>
-        <Contacts />
+        </h2> */}
+        {/* <Contacts /> */}
         <p
           className={`${styles.backgroundCardText} vertical-text bottom-[101%] right-0 rotate-180`}
         >
