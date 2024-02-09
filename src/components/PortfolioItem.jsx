@@ -12,7 +12,7 @@ const PortfolioItem = ({ image, text, techStack, index, link }) => {
           <img
             src={image}
             alt="logo"
-            className={`w-full h-auto object-contain duration-300 ${
+            className={`rounded-[10px] w-full h-auto object-contain duration-300 ${
               index % 2 === 0 ? "animated-left" : "animated-right"
             }`}
           />

@@ -49,6 +49,18 @@ export const ABOUT = [
 
 export const PROJECTS = [
   {
+    image: "/images/logoWebBanners.png",
+    text: "Development of banners of various sizes for the EasyEnglish website, also a practical task for the course.",
+    techStack: ["Illustrator"],
+    link: "/images/webBanners.png",
+  },
+  {
+    image: "/images/logoParadise.png",
+    text: "Practical assignment for the course: Developing a poster for the website.",
+    techStack: ["Illustrator"],
+    link: "/images/paradise.png",
+  },
+  {
     image: "/images/logoBakery.png",
     text: "Development of a corporate identity for the bakery 'Confectionery Raccoon'.",
     techStack: ["Adobe Photoshop", "Illustrator"],
